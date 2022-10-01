@@ -1,0 +1,61 @@
+:root {
+  --bs-green: #dba903;
+  --bs-success: #dba903;
+  --bs-success-rgb: 219, 169, 3;
+}
+
+.btn-outline-success {
+  --bs-btn-color: #dba903;
+  --bs-btn-border-color: #dba903;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #dba903;
+  --bs-btn-hover-border-color: #dba903;
+  --bs-btn-focus-shadow-rgb: 219, 169, 3;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #dba903;
+  --bs-btn-active-border-color: #dba903;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #dba903;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #dba903;
+  --bs-gradient: none;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.5;
+}
+
+.topper {
+  height: 4px;
+  background-color: #dba903;
+  width: 100%;
+}
+
+.navbar {
+  box-shadow: 0 8px 8px rgb(0 0 0 / 9%);
+}
+
+.navbar-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quiz-a-btn {
+  font-size: 1.1rem;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: transparent !important;
+}
+
+.quiz-a-btn:hover {
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #dba903 !important;
+}
