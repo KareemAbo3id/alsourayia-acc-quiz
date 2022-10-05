@@ -18,7 +18,7 @@ function getQ() {
         e.preventDefault();
 
         if (typeuserpass.value === DB_PASSWORD) {
-          window.location.replace(`${ROOT}/users/registre.html`);
+          window.location.replace(`../users/registre.html`);
           typeuserpass.value = '';
         }
       });
