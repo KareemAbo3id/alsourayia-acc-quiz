@@ -21,7 +21,7 @@ registSubmit.addEventListener('click', e => {
     registrerPhone.value = '';
 
     setTimeout(() => {
-      window.open('../quiz/MCQ.html', '_blank');
+      window.open('/quiz/MCQ.html', '_blank');
     }, 1000);
   }
 });
