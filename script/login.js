@@ -11,7 +11,17 @@ function getQ() {
   req.onreadystatechange = () => {
     if (req.readyState == 4 && req.status == 200) {
       let qObj = JSON.parse(req.responseText);
-      console.log(qObj);
+      const DB_USERNAME = qObj[0].admin;
+      const DB_PASSWORD = qObj[0].pass;
+      typeusername.value = DB_USERNAME;
+      userform.addEventListener('submit', e => {
+        e.preventDefault();
+
+        if (typeuserpass.value === DB_PASSWORD) {
+          window.location.replace('../users/registre.html');
+          typeuserpass.value = '';
+        }
+      });
     }
   };
   // get the q:
@@ -20,43 +30,3 @@ function getQ() {
 }
 
 getQ();
-
-typeusername.addEventListener('keyup', () => {
-  if (typeusername.value === '') {
-    typeusername.classList.remove('is-valid');
-    typeusername.classList.add('is-invalid');
-  } else {
-    typeusername.classList.add('is-valid');
-    typeusername.classList.remove('is-invalid');
-  }
-});
-
-typeuserpass.addEventListener('keyup', () => {
-  if (typeuserpass.value === '') {
-    typeuserpass.classList.remove('is-valid');
-    typeuserpass.classList.add('is-invalid');
-  } else {
-    typeuserpass.classList.add('is-valid');
-    typeuserpass.classList.remove('is-invalid');
-  }
-});
-
-userform.addEventListener('submit', e => {
-  e.preventDefault();
-
-  if (typeusername.value === '' || typeuserpass.value === '') {
-    typeusername.focus();
-  }
-  if (!typeusername.value === '') {
-    typeusername.classList.toggle('is-valid');
-    typeusername.classList.remove('is-invalid');
-  }
-
-  if (typeuserpass.value === '') {
-    typeuserpass.classList.remove('is-valid');
-    typeuserpass.classList.add('is-invalid');
-  } else {
-    typeuserpass.classList.add('is-valid');
-    typeuserpass.classList.remove('is-invalid');
-  }
-});

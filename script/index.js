@@ -1,4 +1,7 @@
-'use strict';
+// selectors [MCQ]
+const readUserName = document.querySelector('#readUserName');
+const readUserId = document.querySelector('#readUserId');
+const readUserPhone = document.querySelector('#readUserPhone');
 
 // get questions from api:
 function getQ() {
@@ -15,3 +18,7 @@ function getQ() {
   req.open('GET', 'https://raw.githubusercontent.com/KareemAbo3id/alsourayia-acc-quiz/master/q.json', true);
   req.send();
 }
+
+readUserName.textContent = usersInfoArray[usersInfoArray.length - 1].name;
+readUserId.textContent = usersInfoArray[usersInfoArray.length - 1].iqama;
+readUserPhone.textContent = usersInfoArray[usersInfoArray.length - 1].phone;

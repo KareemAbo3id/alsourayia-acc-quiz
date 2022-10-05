@@ -11,7 +11,7 @@
     <meta name="author" content="Kareem Aboeid" />
     <meta name="language" content="arabic" />
     <!-- Favicon -->
-    <link rel=icon href="media/logo.png" type=image/png>
+    <link rel=icon href="../media/logo.png" type=image/png>
     <!-- Icons -->
     <link
       rel="stylesheet"
@@ -32,7 +32,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
   </head>
   <body>
     <!-- ///////////////////////////////// CONTENT ///////////////////////////////// -->
@@ -40,7 +40,7 @@
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content rounded-1 border-0 shadow-lg">
           <div class="modal-header gap-3">
-            <img src="./media/logo.png" width="40" />
+            <img src="../media/logo.png" width="40" />
             <h5 class="modal-title fw-bold">عن الشركة</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
@@ -75,7 +75,13 @@
           <div class="d-flex flex-row align-items-center justify-content-start gap-2">
             <div class="card text-black-100 bg-light mb-3 rounded-0 w-100">
               <div class="card-body pt-2 pb-2">
-                <p class="card-text count m-0">الإسم: <span class="text-success fw-bold m-2">اسم المتقدم للاختبار هنا</span></p>
+                <p class="card-text count m-0">الإسم: <span id="readUserName" class="text-success fw-bold m-2"></span></p>
+              </div>
+              <div class="card-body pt-2 pb-2">
+                <p class="card-text count m-0">رقم الهوية: <span id="readUserId" class="text-success fw-bold m-2"></span></p>
+              </div>
+              <div class="card-body pt-2 pb-2">
+                <p class="card-text count m-0">رقم الجوال: <span id="readUserPhone" class="text-success fw-bold m-2"></span></p>
               </div>
             </div>
             <div class="card text-black-100 bg-light mb-3 rounded-0 w-50">
@@ -136,6 +142,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="script/index.js"></script>
+    <script src="../local/local.js"></script>
+    <script src="../script/index.js"></script>
   </body>
 </html>

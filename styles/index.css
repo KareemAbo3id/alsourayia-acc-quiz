@@ -21,6 +21,10 @@
   --bs-gradient: none;
 }
 
+.hide {
+  display: none !important;
+}
+
 html {
   font-size: 100%;
 }
