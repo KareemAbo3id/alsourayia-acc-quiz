@@ -1,5 +1,7 @@
 'use strict';
 
+const ROOT = 'alsourayia-acc-quiz';
+
 // Empty Array To Store The user Info
 let usersInfoArray = [];
 
