@@ -35,100 +35,131 @@
     <link rel="stylesheet" href="../styles/index.css" />
   </head>
   <body>
-    <!-- ///////////////////////////////// CONTENT ///////////////////////////////// -->
-    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content rounded-1 border-0 shadow-lg">
-          <div class="modal-header gap-3">
-            <img src="../media/logo.png" width="40" />
-            <h5 class="modal-title fw-bold">عن الشركة</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- ///////////////////////////////// HEADER ///////////////////////////////// -->
+    <div>
+      <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content rounded-1 border-0 shadow-lg">
+            <div class="modal-header gap-3">
+              <img src="../media/logo.png" width="40" />
+              <h5 class="modal-title fw-bold">تعليمات</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="fs-6 m-0"><sub class="text-dark fw-bolder fs-4">*</sub> يتكون الإختبار من أربعة أجزاء رئيسية :</p>
+              <p class="fs-6 m-0"><sub class="text-light fw-bolder fs-4">*</sub> سيتم الإجابة على الاسئلة المتضمنة في كل جزء بالترتيب الآتي :</p>
+              <ol class="list-group list-group-flush list-group-numbered mb-3">
+                <li class="list-group-item bg-transparent border-0">أسئلة إختيار من متعدد.</li>
+                <li class="list-group-item bg-transparent border-0">أسئلة عملية تشمل قيود يومية.</li>
+                <li class="list-group-item bg-transparent border-0">أسئلة مقالية.</li>
+                <li class="list-group-item bg-transparent border-0">أسئلة شخصية (إختياري).</li>
+              </ol>
+              <p class="fs-6"><sub class="text-dark fw-bolder fs-4">*</sub> لتجنب حدوث أي خلل تقني الرجاء عدم تحديث صفحة المتصفح.</p>
+              <p class="fs-6"><sub class="text-dark fw-bolder fs-4">*</sub> عقب إنهاء الإختبار يرجى رفع الإجابات ليتم مراجعتها مع مختص المقابلة.</p>
+            </div>
           </div>
-          <div class="modal-body">
-            <p class="fs-5 lh-lg">
-              السريع للأرضيات والمفروشات منذ عام 1951 ملتزم بتوفير الجودة والرضى، بالأضافة الى توفير الأرضيات التي ستتجاوز توقعاتك وتدوم لأعوام عديدة. يقدم السريع للأرضيات والمفروشات عدة
-              تصاميم متاحة لضمان استيعاب أي ميزانية أو تصميم مراد عمله.
+        </div>
+      </div>
+      <div class="topper"></div>
+      <header class="mb-4 shadow-sm p-2 border-bottom">
+        <div class="container-fluid">
+          <div class="d-flex flex-wrap justify-content-between gap-1">
+            <p class="d-flex flex-wrap justify-content-center align-content-center gap-3 mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+              <img src="https://alsourayia.com/images/thumbs/0000531.png" width="100" alt="شركة السريع التجارية" />
+              <span class="fs-5 fw-normal text-center">إختبار مقابلة العمل في قسم المالية</span>
             </p>
+            <ul class="nav nav-pills">
+              <li class="nav-item p-0">
+                <button
+                  type="button"
+                  class="btn btn-link link-success border-dark rounded-0 border-opacity-25 text-decoration-none"
+                  data-bs-toggle="modal"
+                  data-bs-target="#aboutModal"
+                >
+                  <span class="fs-6 fw-normal">تعليمات</span>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
+      </header>
     </div>
-    <div class="topper"></div>
-    <header class="mb-4 shadow-sm p-2 border-bottom">
-      <div class="container">
-        <div class="d-flex flex-wrap justify-content-center align-content-center">
-          <p class="d-flex flex-wrap align-items-center justify-content-center gap-3 mb-3 mb-md-0 me-md-auto">
-            <img src="https://alsourayia.com/images/thumbs/0000531.png" width="100" alt="شركة السريع التجارية" />
-            <span class="fs-5 fw-normal">إختبار مقابلة العمل في قسم المالية</span>
-          </p>
-          <button type="button" class="btn btn-link link-success border-dark rounded-0 border-opacity-25 text-decoration-none" data-bs-toggle="modal" data-bs-target="#aboutModal">
-            <span class="fs-6 fw-normal">عن الشركة</span>
-          </button>
-        </div>
-      </div>
-    </header>
+    <!-- ///////////////////////////////// HEADER ///////////////////////////////// -->
 
+    <!-- ///////////////////////////////// CONTENT ///////////////////////////////// -->
     <main>
-      <div class="quiz-app mt-4">
-        <div class="container">
-          <!-- quiz-info -->
-          <div class="d-flex flex-row align-items-center justify-content-start gap-2">
-            <div class="card text-black-100 bg-light mb-3 rounded-0 w-100">
-              <div class="card-body pt-2 pb-2">
-                <p class="card-text count m-0">الإسم: <span id="readUserName" class="text-success fw-bold m-2"></span></p>
+      <div class="quiz-app">
+        <div class="container-fluid container-xl">
+          <!-- applicant info -->
+          <div class="card border-1 rounded-0 mt-4">
+            <div class="card-header rounded-0 border-0 d-flex flex-wrap justify-content-start align-items-center gap-4">
+              <div class="d-flex flex-row justify-content-center align-items-center gap-3 p-1">
+                <p class="fw-normal m-0 text-secondary">الإسم</p>
+                <span id="readUserName" class="text-success fw-bold"></span>
               </div>
-              <div class="card-body pt-2 pb-2">
-                <p class="card-text count m-0">رقم الهوية: <span id="readUserId" class="text-success fw-bold m-2"></span></p>
+
+              <div class="d-flex flex-row justify-content-center align-items-center gap-3 p-1">
+                <p class="fw-normal m-0 text-secondary">رقم الهوية</p>
+                <span id="readUserId" class="text-success fw-bold"></span>
               </div>
-              <div class="card-body pt-2 pb-2">
-                <p class="card-text count m-0">رقم الجوال: <span id="readUserPhone" class="text-success fw-bold m-2"></span></p>
-              </div>
-            </div>
-            <div class="card text-black-100 bg-light mb-3 rounded-0 w-50">
-              <div class="card-body pt-2 pb-2">
-                <p class="card-text category m-0">نوع الإختبار: <span class="text-success fw-bold m-2">إختيار من متعدد</span></p>
-              </div>
-            </div>
-            <div class="card text-black-100 bg-light mb-3 rounded-0 w-50">
-              <div class="card-body pt-2 pb-2">
-                <p class="card-text count m-0">رقم السؤال: <span class="text-success fw-bold m-2">10</span></p>
+
+              <div class="d-flex flex-row justify-content-center align-items-center gap-3 p-1">
+                <p class="fw-normal m-0 text-secondary">رقم الجوال</p>
+                <span id="readUserPhone" class="text-success fw-bold"></span>
               </div>
             </div>
           </div>
-          <div class="d-flex flex-row align-items-center justify-content-start mt-2">
-            <button class="btn btn-success mb-3 p-2 rounded-0 w-25" type="submit"><i class="fa-sharp fa-solid fa-check"></i> تقديم الإجابات</button>
+
+          <!-- quiz question info -->
+          <div class="card border-1 rounded-0 mt-2">
+            <div class="card-header rounded-0 border-0 d-flex flex-wrap justify-content-start align-items-center gap-4">
+              <div class="d-flex flex-row justify-content-center align-items-center gap-3 p-1">
+                <p class="fw-normal m-0 text-secondary">نوع الإختبار</p>
+                <span id="readQuizSort" class="text-success fw-bold">مقالي</span>
+              </div>
+              <div class="d-flex flex-row justify-content-center align-items-center gap-3 p-1">
+                <p class="fw-normal m-0 text-secondary">رقم السؤال</p>
+                <span id="readQuizNum" class="text-success fw-bold">1</span>
+              </div>
+            </div>
           </div>
-          <!-- quiz-info -->
-          <div class="border-1 border-top mb-5"></div>
-          <div class="quiz-q">
-            <div class="card text-black-100 bg-light mb-3 rounded-0 w-auto">
-              <div class="card-header">
-                <p class="fs-3 m-0">
-                  <span class="q-no text-black-50">1. &nbsp; </span>
-                  ما هو الهدف من إعداد ميزان المراجعة؟
-                </p>
+
+          <!-- quiz -->
+          <div class="card border-1 rounded-0 mt-4">
+            <div class="card-header">
+              <p class="fs-3 m-0">
+                <span id="quizTitle" class="q-no text-black-50">1. &nbsp; </span>
+                ما هو الهدف من إعداد ميزان المراجعة؟
+              </p>
+            </div>
+            <div class="card-body">
+              <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" />
+                <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio1">
+                  <span class="a-no text-black-50">1. &nbsp; </span>
+                  <span id="quizAns0"> من أجل العمل على تخفيض المصروفات وتعظيم الإيرادات. </span>
+                </label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off" />
+                <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio2">
+                  <span class="a-no text-black-50">2. &nbsp; </span>
+                  <span id="quizAns1"> من أجل إعداد الحسابات الختامية التي تبين نتيجة الأعمال والمركز المالي للمنشأة. </span>
+                </label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off" />
+                <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio3">
+                  <span class="a-no text-black-50">3. &nbsp; </span>
+                  <span id="quizAns2"> من أجل تزويد مستخدمي البيانات الحسابية بمعلومات عن النقد المستلم والنقد المدفوع خلال الفترة المالية. </span>
+                </label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio4" autocomplete="off" />
+                <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio4">
+                  <span class="a-no text-black-50">4. &nbsp; </span>
+                  <span id="quizAns3"> جميع ما سبق. </span>
+                </label>
               </div>
-              <div class="card-body">
-                <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
-                  <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" />
-                  <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio1">
-                    <span class="a-no text-black-50">1. &nbsp; </span>من أجل العمل على تخفيض المصروفات وتعظيم الإيرادات.
-                  </label>
-                  <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off" />
-                  <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio2">
-                    <span class="a-no text-black-50">2. &nbsp; </span>
-                    من أجل إعداد الحسابات الختامية التي تبين نتيجة الأعمال والمركز المالي للمنشأة.
-                  </label>
-                  <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off" />
-                  <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio3">
-                    <span class="a-no text-black-50">3. &nbsp; </span>من أجل تزويد مستخدمي البيانات الحسابية بمعلومات عن النقد المستلم والنقد المدفوع خلال الفترة المالية.</label
-                  >
-                  <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio4" autocomplete="off" />
-                  <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio4">
-                    <span class="a-no text-black-50">4. &nbsp; </span>جميع ما سبق.</label
-                  >
-                </div>
-              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 mt-4">
+              <button id="nextQ" class="btn btn-success rounded-0 w-100 py-2">السؤال التالي <i class="fa fa-arrow-left"></i></button>
             </div>
           </div>
         </div>
