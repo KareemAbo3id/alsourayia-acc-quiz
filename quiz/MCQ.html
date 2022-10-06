@@ -90,6 +90,9 @@
     <main>
       <div class="quiz-app">
         <div class="container-fluid container-xl">
+          <div class="page-title border-bottom">
+            <h1 class="display-6">إختبار محاسبة</h1>
+          </div>
           <!-- applicant info -->
           <div class="card border-1 rounded-0 mt-4">
             <div class="card-header rounded-0 border-0 d-flex flex-wrap justify-content-start align-items-center gap-4">
@@ -121,6 +124,10 @@
                 <p class="fw-normal m-0 text-secondary">رقم السؤال</p>
                 <span id="readQuizNum" class="text-success fw-bold">1</span>
               </div>
+              <div class="d-flex flex-row justify-content-center align-items-center gap-3 p-1">
+                <p class="fw-normal m-0 text-secondary">عدد الأسئلة</p>
+                <span id="readQuizCount" class="text-success fw-bold"></span>
+              </div>
             </div>
           </div>
 
@@ -128,8 +135,8 @@
           <div class="card border-1 rounded-0 mt-4">
             <div class="card-header">
               <p class="fs-3 m-0">
-                <span id="quizTitle" class="q-no text-black-50">1. &nbsp; </span>
-                ما هو الهدف من إعداد ميزان المراجعة؟
+                <span class="q-no text-black-50">1. &nbsp; </span>
+                <span id="quizTitle"></span>
               </p>
             </div>
             <div class="card-body">
@@ -137,22 +144,22 @@
                 <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" />
                 <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio1">
                   <span class="a-no text-black-50">1. &nbsp; </span>
-                  <span id="quizAns0"> من أجل العمل على تخفيض المصروفات وتعظيم الإيرادات. </span>
+                  <span id="quizAns0"></span>
                 </label>
                 <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off" />
                 <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio2">
                   <span class="a-no text-black-50">2. &nbsp; </span>
-                  <span id="quizAns1"> من أجل إعداد الحسابات الختامية التي تبين نتيجة الأعمال والمركز المالي للمنشأة. </span>
+                  <span id="quizAns1"></span>
                 </label>
                 <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off" />
                 <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio3">
                   <span class="a-no text-black-50">3. &nbsp; </span>
-                  <span id="quizAns2"> من أجل تزويد مستخدمي البيانات الحسابية بمعلومات عن النقد المستلم والنقد المدفوع خلال الفترة المالية. </span>
+                  <span id="quizAns2"></span>
                 </label>
                 <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio4" autocomplete="off" />
                 <label class="quiz-a-btn btn btn-outline-success text-start text-black border-0 rounded-0 mb-2" for="vbtn-radio4">
                   <span class="a-no text-black-50">4. &nbsp; </span>
-                  <span id="quizAns3"> جميع ما سبق. </span>
+                  <span id="quizAns3"></span>
                 </label>
               </div>
             </div>

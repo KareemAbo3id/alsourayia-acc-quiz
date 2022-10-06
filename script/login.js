@@ -4,6 +4,7 @@ const userform = document.querySelector('#userform');
 const typeusername = document.querySelector('#typeusername');
 const typeuserpass = document.querySelector('#typeuserpass');
 const typeusersubmit = document.querySelector('#typeusersubmit');
+const logAlert = document.querySelector('#logAlert');
 
 function getQ() {
   let req = new XMLHttpRequest();
@@ -20,6 +21,9 @@ function getQ() {
         if (typeuserpass.value === DB_PASSWORD) {
           window.location.replace(`../users/registre.html`);
           typeuserpass.value = '';
+        } else {
+          logAlert.classList.remove('hide');
+          logAlert.innerHTML = '<span>كلمة المرور غير صحيحة</span><br>';
         }
       });
     }
