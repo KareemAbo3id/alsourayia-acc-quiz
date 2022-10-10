@@ -1,26 +1,31 @@
 'use strict';
 
+// login data
+const USERNAME = document.querySelector('#typeusername');
+const USERPASS = document.querySelector('#typeuserpass');
+const USERSUBMIT = document.querySelector('#typeusersubmit');
 const userform = document.querySelector('#userform');
-const typeusername = document.querySelector('#typeusername');
-const typeuserpass = document.querySelector('#typeuserpass');
-const typeusersubmit = document.querySelector('#typeusersubmit');
 const logAlert = document.querySelector('#logAlert');
 
-function getQ() {
+// FUNCTION: get JSON data
+function getQuizData() {
   let req = new XMLHttpRequest();
   // check the response stutes:
   req.onreadystatechange = () => {
     if (req.readyState == 4 && req.status == 200) {
-      let qObj = JSON.parse(req.responseText);
-      const DB_USERNAME = qObj[0].admin;
-      const DB_PASSWORD = qObj[0].pass;
-      typeusername.value = DB_USERNAME;
+      let QUIZ_DATA_OBJECT = JSON.parse(req.responseText);
+      // get the user/pass
+      const DB_USERNAME = QUIZ_DATA_OBJECT[0].admin;
+      const DB_PASSWORD = QUIZ_DATA_OBJECT[0].pass;
+      USERNAME.value = DB_USERNAME;
+
+      // submit login data to begin test
       userform.addEventListener('submit', e => {
         e.preventDefault();
 
-        if (typeuserpass.value === DB_PASSWORD) {
-          window.location.replace(`../users/registre.html`);
-          typeuserpass.value = '';
+        if (USERPASS.value === DB_PASSWORD) {
+          window.location.replace(`../users/signup.html`); // go to signup page
+          USERPASS.value = '';
         } else {
           logAlert.classList.remove('hide');
           logAlert.innerHTML = '<span>كلمة المرور غير صحيحة</span><br>';
@@ -28,9 +33,9 @@ function getQ() {
       });
     }
   };
-  // get the q:
+  // get the response:
   req.open('GET', 'https://raw.githubusercontent.com/KareemAbo3id/alsourayia-acc-quiz/master/q.json', true);
   req.send();
 }
 
-getQ();
+getQuizData();

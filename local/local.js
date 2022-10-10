@@ -1,33 +1,32 @@
 'use strict';
 
+////////////////////////////////////////////////////////
 // Empty Array To Store The user Info
-let usersInfoArray = [];
-
+let USERS_ARRAY = [];
 // Empty Array To Store The user answers
-let userAnsArray = [];
+let ANSWERS_ARRAY = [];
+////////////////////////////////////////////////////////
 
 // Check if Theres Data In Local Storage
-if (localStorage.getItem('users')) {
-  usersInfoArray = JSON.parse(localStorage.getItem('users'));
+if (localStorage.getItem('USERS_DB')) {
+  USERS_ARRAY = JSON.parse(localStorage.getItem('USERS_DB'));
 }
 
 // FUNCTION: Add New User To Array Of Users As An Object:
 function addNewUser(userName, userId, userPhone) {
   // User schema:
-  const userModel = {
-    id: 'u' + Date.now(),
+  const USER_SCHEMA = {
+    id: '_u' + Date.now(),
     name: userName,
     iqama: userId,
     phone: userPhone,
   };
-  // Push user To Array Of users
-  usersInfoArray.push(userModel);
 
-  // Add users To Local Storage
-  updateLocalStorage(usersInfoArray);
+  USERS_ARRAY.push(USER_SCHEMA); // Push user To USERS_ARRAY
+  updateLocalStorage(USERS_ARRAY); // Add users To Local Storage
 }
 
 // FUNCTION: Update Local Storage With User Info:
-function updateLocalStorage(usersInfoArray) {
-  window.localStorage.setItem('users', JSON.stringify(usersInfoArray));
+function updateLocalStorage(usersArr) {
+  window.localStorage.setItem('USERS_DB', JSON.stringify(usersArr));
 }
