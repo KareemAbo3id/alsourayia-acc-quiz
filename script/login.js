@@ -34,7 +34,7 @@ function getQuizData() {
     }
   };
   // get the response:
-  req.open('GET', 'https://raw.githubusercontent.com/KareemAbo3id/alsourayia-acc-quiz/master/q.json', true);
+  req.open('GET', 'https://raw.githubusercontent.com/KareemAbo3id/alsourayia-acc-quiz/master/quiz-data.json', true);
   req.send();
 }
 
